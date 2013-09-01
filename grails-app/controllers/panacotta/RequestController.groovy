@@ -13,7 +13,8 @@ class RequestController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [requestInstanceList: Request.list(params), requestInstanceTotal: Request.count()]
+//        [requestInstanceList: Request.list(params), requestInstanceTotal: Request.count()]
+		render Request.list() as JSON
     }
 
     def create() {

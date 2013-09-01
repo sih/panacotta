@@ -21,8 +21,6 @@ myApp.config(['$httpProvider', function($httpProvider) {
 function RequestListCtrl($scope, $http) {
   $http.get('request/list').success(function(data) {
     $scope.requests = data;
-  }).error(function(data) {
-	alert('hoodie');
   });
 
 }
